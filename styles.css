@@ -1,0 +1,437 @@
+:root {
+    --primary: #0a7ac2;
+    --primary-dark: #055686;
+    --accent: #f4b000;
+    --bg: #f7f7fb;
+    --text: #222;
+    --muted: #666;
+    --card-bg: #ffffff;
+    --border: #e0e0ee;
+    --danger: #d9534f;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* Layout */
+  
+  .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .site-header-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+  }
+  
+  .brand span {
+    display: block;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+  }
+  
+  .nav-links a.active,
+  .nav-links a:hover {
+    color: #ffffff;
+    background: var(--primary);
+  }
+  
+  .site-main {
+    max-width: 1120px;
+    margin: 1.5rem auto 2.5rem;
+    padding: 0 1rem;
+  }
+  
+  /* Hero / sections */
+  
+  .hero {
+    background: linear-gradient(135deg, #ffffff, #e7f4ff);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .hero h1 {
+    margin: 0 0 0.75rem;
+    font-size: 2rem;
+    color: var(--primary-dark);
+  }
+  
+  .hero p {
+    margin: 0.25rem 0;
+    color: var(--muted);
+  }
+  
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(10, 122, 194, 0.08);
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-cta {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero-stats {
+    display: grid;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-stat {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--border);
+  }
+  
+  .hero-stat strong {
+    display: block;
+    font-size: 1.1rem;
+  }
+  
+  /* Buttons */
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(10, 122, 194, 0.25);
+  }
+  
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary-dark);
+  }
+  
+  .btn-outline:hover {
+    background: rgba(10, 122, 194, 0.08);
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Products */
+  
+  .section-title {
+    font-size: 1.4rem;
+    margin: 2rem 0 0.75rem;
+    color: var(--primary-dark);
+  }
+  
+  .section-subtitle {
+    margin: 0 0 1.25rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border-radius: 0.9rem;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+  }
+  
+  .card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+  }
+  
+  .pill {
+    display: inline-flex;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    background: rgba(244, 176, 0, 0.12);
+    color: #8a5b00;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card ul {
+    margin: 0.3rem 0 0.75rem;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+  }
+  
+  .card li {
+    margin-bottom: 0.2rem;
+  }
+  
+  /* Forms */
+  
+  .form-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    padding: 1.4rem 1.5rem;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.15s ease, box-shadow 0.15s ease;
+    background: #fcfcff;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px rgba(10, 122, 194, 0.2);
+    background: #ffffff;
+  }
+  
+  .form-group small {
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  /* Product quantity layout */
+  
+  .brand-group {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .brand-group-title {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--primary-dark);
+  }
+  
+  .brand-group-sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+  
+  .quantity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.5rem 1rem;
+  }
+  
+  .quantity-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .quantity-item span {
+    flex: 1;
+  }
+  
+  .quantity-item input[type="number"] {
+    width: 90px;
+  }
+  
+  /* Validation / messages */
+  
+  .error-text {
+    color: var(--danger);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+  
+  .notice {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.6rem;
+  }
+  
+  /* Orders table (CRUD list) */
+  
+  .table-wrapper {
+    margin-top: 1.75rem;
+    overflow-x: auto;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .orders-table th {
+    background: #f3f5ff;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  
+  .orders-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(10, 122, 194, 0.08);
+    color: var(--primary-dark);
+    font-size: 0.7rem;
+  }
+  
+  .actions-cell {
+    display: flex;
+    gap: 0.25rem;
+  }
+  
+  .btn-danger {
+    background: var(--danger);
+    color: #ffffff;
+  }
+  
+  .btn-danger:hover {
+    background: #b52d29;
+  }
+  
+  /* Footer */
+  
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    background: #ffffff;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 720px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  
+    .nav-links {
+      gap: 0.5rem;
+    }
+  
+    .site-header-inner {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+  }

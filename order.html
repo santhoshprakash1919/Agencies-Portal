@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bulk Order - Sindhu Agencies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">
+        Sindhu Agencies
+        <span>Kaveripattinam, Krishnagiri District</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="order.html" class="active">Bulk Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section>
+      <h1 class="section-title">Bulk Order Form</h1>
+      <p class="section-subtitle">
+        This interface is for agencies and wholesale buyers only. Orders must be placed in bulk quantities
+        (no loose / retail orders).
+      </p>
+    </section>
+
+    <!-- Error message for validation -->
+    <div id="order-error" class="error-text"></div>
+
+    <!-- Form will be fully built by script.js -->
+    <form id="order-form"></form>
+
+    <!-- CRUD: Saved orders list (Read / Update / Delete) -->
+    <section style="margin-top: 2rem;">
+      <h2 class="section-title">Saved Bulk Orders (Local)</h2>
+      <p class="section-subtitle">
+        Orders shown here are stored only in this browser using localStorage. Use Edit / Delete to manage them.
+      </p>
+      <div id="orders-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Sindhu Agencies · Kaveripattinam, Krishnagiri District · Bulk Orders Only
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
